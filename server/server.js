@@ -25,6 +25,19 @@ App.get('/property/:ListingId/photos', (req, res) => {
   res.redirect(`http://localhost:3000/listing/${req.params.ListingId}/photos`);
 });
 
+//Description
+App.get('/property/:id/info', (req, res) => {
+  res.redirect(`http://localhost:3333/listing/${req.params.id}/info`);
+});
+
+App.get('/property/:id/amenities', (req, res) => {
+  res.redirect(`http://localhost:3333/listing/${req.params.id}/info`);
+});
+
+App.get('/property/:id/highlights', (req, res) => {
+  res.redirect(`http://localhost:3333/listing/${req.params.id}/highlights`);
+});
+
 App.use(express.json());
 App.use(cors());
 
